@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="list-group">
+        {% for product in object_list %}
+            <a href="{% url 'product-detail' category_slug=product.product_category.slug slug=product.slug %}" class="list-group-item">
+                <h4 class="list-group-item-heading">{{ product.product_name }}</h4>
+                <p class="list-group-item-text">{{ product.product_price }}</p>
+            </a>
+        {% empty %}
+            <h4 class="list-group-item-heading">No products for this category</h4>
+            <p class="list-group-item-text">Please check back later</p>
+        {% endfor %}
+    </div>
+{% endblock %}

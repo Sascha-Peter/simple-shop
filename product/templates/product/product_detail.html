@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}| {{ object.product_name }}{% endblock %}
+{% block content %}
+
+<div class="jumbotron">
+  <h1 class="text-center">{{ object.product_name }}</h1>
+  {% if object.product_price %}<p>{{ object.product_price }}</p>{% endif %}
+  <p><a class="btn btn-link" href="{% url 'product-list' slug=product.product_category.slug %}" role="button">Back to product list</a></p>
+</div>
+
+{% endblock %}
