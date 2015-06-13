@@ -12,10 +12,12 @@ from .models import ProductCategory, Product
 class ProductCategoryAdmin(admin.ModelAdmin):
     """Defines the model admin for product categories"""
     model = ProductCategory
+    prepopulated_fields = {"slug": ("category_name",)}
 
 
 class ProductAdmin(admin.ModelAdmin):
     model = Product
+    prepopulated_fields = {"slug": ("product_name",)}
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(ProductCategory, ProductCategoryAdmin)
