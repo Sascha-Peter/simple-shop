@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Simple Shop {% block site_title %}{% endblock %}</title>
+
+        {% block meta %}
+        {% endblock %}
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ MEDIA_URL }}css/style.css">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row nav">{% include "elements/navbar.html" %}</div>
+            <div class="row content">
+                <div class="col-md-8 col-md-offset-2">
+
+                    {% block content %}
+                    {% endblock %}
+
+                </div>
+            </div>
+            <div class="row footer">{% include "elements/footer.html" %}</div>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        </div>
+    </body>
+</html>
