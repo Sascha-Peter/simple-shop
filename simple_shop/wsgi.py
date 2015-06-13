@@ -1,5 +1,4 @@
-"""
-WSGI config for deloitte_shop project.
+"""WSGI config for deloitte_shop project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
