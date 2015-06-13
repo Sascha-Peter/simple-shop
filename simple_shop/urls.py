@@ -22,6 +22,7 @@ from django.conf.urls import include, url
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', TemplateView.as_view(template_name="base.html"), name="home"),
+    url(r'^products/', include('product.urls')),
 ]
 
 if settings.DEBUG:
