@@ -19,6 +19,11 @@
                 {% show_categories %}
             </ul>
         </div>
+        <div>
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+        </div>
 
     </div>
 </div>
