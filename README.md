@@ -23,3 +23,15 @@ All additional packages can be found in pip-requirements.txt.
 ### Installation of additional requirements
 All additional packages can simply be installed by running:
 `pip install -r pip-requirements.txt`
+
+## Features
+
+### Done
+* Creating and editing of Products
+* Creation of product categories
+* Display of products within categories and product details
+* Shopping cart implementation to add, remove and display products
+
+### Outstanding
+* Implementation of vouchers
+* Unit tests
