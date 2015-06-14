@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', TemplateView.as_view(template_name="base.html"), name="home"),
     url(r'^products/', include('product.urls')),
+    url(r'^cart/', include('cart.urls')),
 ]
 
 if settings.DEBUG:
