@@ -7,6 +7,8 @@ from django.contrib.contenttypes import generic
 class Cart(models.Model):
     creation_date = models.DateTimeField(verbose_name=_('creation date'))
     checked_out = models.BooleanField(default=False, verbose_name=_('checked out'))
+    has_voucher = models.BooleanField(default=False)
+    voucher_code = models.CharField(max_length=250, null=True, blank=True)
 
     class Meta:
         verbose_name = _('cart')
@@ -45,7 +47,10 @@ class Item(models.Model):
         return u'%d units of %s' % (self.quantity, self.product.__class__.__name__)
 
     def total_price(self):
-        return self.quantity * self.unit_price
+        if self.cart.has_voucher:
+            return (self.quantity * self.unit_price) / 2
+        else:
+            return self.quantity * self.unit_price
     total_price = property(total_price)
 
     # product

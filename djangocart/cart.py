@@ -9,7 +9,8 @@ class ItemAlreadyExists(Exception):
 class ItemDoesNotExist(Exception):
     pass
 
-class Cart:
+class SessionCart:
+    """@change: Rename to SessionCart to avoid clashes"""
     def __init__(self, request):
         cart_id = request.session.get(CART_ID)
         if cart_id:

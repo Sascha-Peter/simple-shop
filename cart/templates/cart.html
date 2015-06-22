@@ -15,4 +15,12 @@
         </tr>
         {% endfor %}
     </table>
+    {% if not self.has_voucher %}
+        <form action="" method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Update" />
+        </form>
+    {% else %}
+        <p>Voucher code applied {{ self.voucher_code }}</p>
+    {% endif %}
 {% endblock %}
