@@ -37,8 +37,6 @@ All additional packages can simply be installed by running:
 * Unit tests
 
 ## Copyright
-This codebase, unless otherwise stated, is (c) 2015 by Sascha Peter <sascha.o.peter@gmail.com>.
+This codebase, unless otherwise stated, is Copyright by Sascha Peter (c) 2015 sascha.o.peter@gmail.com.
 
-This project incorporates 3rd party libraries such as Django-Cart - https://github.com/bmentges/django-cart - licensed under GPLv3.
-The source of the library as found in this project has been modified to work with python 3.3 / django 1.8 and may contains further modifications to make it work for specific use-cases I intend it to work for.
-Author and license files, amongst the source code can be found in the djangocart folder - the original project can be found at https://github.com/bmentges/django-cart
+This project incorporates third party libraries such as Django-Cart - https://github.com/bmentges/django-cart - and is licensed under GPLv3 - http://www.gnu.org/licenses/gpl-3.0.en.html. The source code in this project has been modified to work with Python 3.3 / Django 1.8 and to support the features listed above . Author, license and source code files can be found in the djangocart folder - the original project can be found at https://github.com/bmentges/django-cart
