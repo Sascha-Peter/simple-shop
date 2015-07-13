@@ -1,7 +1,7 @@
 """This file contains the cart related forms
 
 @author: Sascha Peter <sascha.o.peter@gmail.com>
-@version: 0.3.0-alpha
+@version: 0.4.0-alpha
 @since: 2015-06-22
 """
 
