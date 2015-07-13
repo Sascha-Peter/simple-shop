@@ -85,12 +85,14 @@ class SessionCart:
         is_footwear = False
         for item in self.cart.item_set.all():
             item_product = item.get_product()
+            if 'Footwear' in item_product.product_category.category_name:
+                is_footwear = True
             result += item.total_price
         if self.cart.has_voucher:
             result -= 5
         if 50 < result < 75:
             result -= 10
-        if result > 75:
+        if result > 75 and is_footwear:
             result -= 15
         return result
 
