@@ -1,8 +1,10 @@
 """This file provides the views handling cart specific tasks
 
 @author: Sascha Peter <sascha.o.peter@gmail.com>
-@version: 0.3.0-alpha
+@version: 0.4.0-alpha
 @since: 2015-06-13
+
+@change: 0.4.0-alpha - Add product stock check
 """
 from django.shortcuts import render
 from django.core.urlresolvers import reverse
@@ -17,7 +19,6 @@ from djangocart.models import Cart
 
 
 def add_to_cart(request, product_id, quantity):
-    """@change: 0.4.0-alpha - Add product stock check"""
     product = Product.objects.get(id=product_id)
     cart = SessionCart(request)
     items = cart.cart.item_set.all()

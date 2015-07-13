@@ -32,9 +32,9 @@ All additional packages can simply be installed by running:
 * Display of products within categories and product details
 * Shopping cart implementation to add, remove and display products
 * Implementation of vouchers
+* Disallow ordering more items than in stock
 
 ### Outstanding
-* Disallow ordering more items than in stock
 * Unit tests
 * User Documentation for mac users
 
