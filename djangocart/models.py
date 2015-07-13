@@ -5,8 +5,13 @@ from django.contrib.contenttypes import generic
 
 
 class Cart(models.Model):
+    """@change: Add has_voucher and voucher_code fields to expand
+    cart with discount functionality
+    """
     creation_date = models.DateTimeField(verbose_name=_('creation date'))
     checked_out = models.BooleanField(default=False, verbose_name=_('checked out'))
+    has_voucher = models.BooleanField(default=False)
+    voucher_code = models.CharField(max_length=250, null=True, blank=True)
 
     class Meta:
         verbose_name = _('cart')
