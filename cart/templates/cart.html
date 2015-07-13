@@ -5,7 +5,7 @@
         <tr>
             <th>Product</th>
             <th>Quantity</th>
-            <th>Total Price</th>
+            <th>Price</th>
         </tr>
         {% for item in cart %}
         <tr>
@@ -15,12 +15,13 @@
         </tr>
         {% endfor %}
     </table>
-    {% if not self.has_voucher %}
+    {% if not cart.cart.has_voucher %}
         <form action="" method="post">{% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Update" />
         </form>
     {% else %}
-        <p>Voucher code applied {{ self.voucher_code }}</p>
+        <p>Voucher code applied {{ cart.cart.voucher_code }}</p>
     {% endif %}
+    <p>Total price (including discounts): {{ cart.summary }}</p>
 {% endblock %}

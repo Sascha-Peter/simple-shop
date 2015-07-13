@@ -38,14 +38,13 @@ def get_cart(request):
     cart_id = request.session.get('CART-ID')
     print(cart_id)
     if request.method == "POST" and cart_id:
-        print("we have cart id and post")
         cart = Cart.objects.get(id=cart_id, checked_out=False)
         form = VoucherUpdateForm(request.POST)
         if form.is_valid():
-            print("form is valid")
             form = VoucherUpdateForm(request.POST, instance=cart)
+            form.instance.has_voucher = True
             form.save()
-            # return HttpResponseRedirect(request.path)
+            return HttpResponseRedirect(request.path)
     else:
         form = VoucherUpdateForm()
     return render(request, 'cart.html',

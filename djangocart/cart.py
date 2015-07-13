@@ -3,14 +3,17 @@ from djangocart import models
 
 CART_ID = 'CART-ID'
 
+
 class ItemAlreadyExists(Exception):
     pass
+
 
 class ItemDoesNotExist(Exception):
     pass
 
+
 class SessionCart:
-    """@change: Rename to SessionCart to avoid clashes"""
+    """@change: Rename Cart to SessionCart to avoid clashes"""
     def __init__(self, request):
         cart_id = request.session.get(CART_ID)
         if cart_id:
@@ -69,20 +72,28 @@ class SessionCart:
             )
         except models.Item.DoesNotExist:
             raise ItemDoesNotExist
-            
+
     def count(self):
         result = 0
         for item in self.cart.item_set.all():
             result += 1 * item.quantity
         return result
-        
+
     def summary(self):
+        """@change: Implement discount logic"""
         result = 0
+        is_footwear = False
         for item in self.cart.item_set.all():
+            item_product = item.get_product()
             result += item.total_price
+        if self.cart.has_voucher:
+            result -= 5
+        if 50 < result < 75:
+            result -= 10
+        if result > 75:
+            result -= 15
         return result
 
     def clear(self):
         for item in self.cart.item_set.all():
             item.delete()
-

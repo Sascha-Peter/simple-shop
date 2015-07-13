@@ -5,6 +5,9 @@ from django.contrib.contenttypes import generic
 
 
 class Cart(models.Model):
+    """@change: Add has_voucher and voucher_code fields to expand
+    cart with discount functionality
+    """
     creation_date = models.DateTimeField(verbose_name=_('creation date'))
     checked_out = models.BooleanField(default=False, verbose_name=_('checked out'))
     has_voucher = models.BooleanField(default=False)
@@ -47,10 +50,7 @@ class Item(models.Model):
         return u'%d units of %s' % (self.quantity, self.product.__class__.__name__)
 
     def total_price(self):
-        if self.cart.has_voucher:
-            return (self.quantity * self.unit_price) / 2
-        else:
-            return self.quantity * self.unit_price
+        return self.quantity * self.unit_price
     total_price = property(total_price)
 
     # product
