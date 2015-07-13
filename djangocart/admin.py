@@ -2,7 +2,7 @@
 models
 
 @author: Sascha Peter <sascha.o.peter@gmail.com>
-@version: 0.1.0-alpha
+@version: 0.3.0-alpha
 @since: 2015-07-13
 """
 
