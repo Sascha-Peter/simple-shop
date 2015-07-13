@@ -27,13 +27,14 @@ All additional packages can simply be installed by running:
 ## Features
 
 ### Done
-* Creating and editing of Products
+* Creation and editing of products
 * Creation of product categories
 * Display of products within categories and product details
 * Shopping cart implementation to add, remove and display products
+* Implementation of vouchers
 
 ### Outstanding
-* Implementation of vouchers
+* Disallow ordering more items than in stock
 * Unit tests
 
 ## Copyright

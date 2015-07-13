@@ -1,6 +1,8 @@
 from django.test import TestCase
-from .models import Cart, Item
 from django.contrib.auth.models import User
+
+from .models import Cart, Item
+
 import datetime
 from decimal import Decimal
 
