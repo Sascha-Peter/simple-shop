@@ -88,14 +88,19 @@ class SessionCart:
             if 'Footwear' in item_product.product_category.category_name:
                 is_footwear = True
             result += item.total_price
-        if self.cart.has_voucher:
-            result -= 5
-        if 50 < result < 75:
-            result -= 10
-        if result > 75 and is_footwear:
-            result -= 15
+        if self.cart.has_voucher and self.cart.voucher_code:
+            if self.cart.voucher_code == "vou5":
+                result -= 5
+            if 50 < result < 75 and self.cart.voucher_code == "vou10":
+                result -= 10
+            if result > 75 and is_footwear and self.cart.voucher_code == "vou15":
+                result -= 15
         return result
 
     def clear(self):
+        """@change: Remove voucher code and voucher status"""
         for item in self.cart.item_set.all():
             item.delete()
+        self.cart.voucher_code = ""
+        self.cart.has_voucher = False
+        self.cart.save()
