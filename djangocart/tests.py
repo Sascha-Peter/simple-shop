@@ -1,5 +1,5 @@
 from django.test import TestCase
-from models import Cart, Item
+from .models import Cart, Item
 from django.contrib.auth.models import User
 import datetime
 from decimal import Decimal
