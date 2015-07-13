@@ -17,11 +17,28 @@ from djangocart.models import Cart
 
 
 def add_to_cart(request, product_id, quantity):
+    """@change: 0.4.0-alpha - Add product stock check"""
     product = Product.objects.get(id=product_id)
     cart = SessionCart(request)
-    cart.add(product, product.product_price, quantity)
-    messages.add_message(request, messages.SUCCESS,
-                         'Item has been added to cart.')
+    items = cart.cart.item_set.all()
+    if product.product_stock == 0:
+        messages.add_message(request, messages.ERROR,
+                             'No more items in stock!')
+    else:
+        if items:
+            for item in items:
+                product = item.get_product()
+                if product.product_stock == item.quantity:
+                    messages.add_message(request, messages.ERROR,
+                                         'No more items in stock!')
+                else:
+                    cart.add(product, product.product_price, quantity)
+                    messages.add_message(request, messages.SUCCESS,
+                                         'Item has been added to cart.')
+        else:
+            cart.add(product, product.product_price, quantity)
+            messages.add_message(request, messages.SUCCESS,
+                                 'Item has been added to cart.')
     return HttpResponseRedirect(reverse('product-detail', kwargs={'category_slug': product.product_category.slug, 'slug': product.slug}))
 
 
@@ -31,7 +48,7 @@ def remove_from_cart(request, product_id):
     cart.remove(product)
     messages.add_message(request, messages.SUCCESS,
                          'Item has been removed from the cart.')
-    return HttpResponseRedirect(reverse('product-detail', kwargs={'category_slug': product.product_category.slug, 'slug': product.slug}))
+    return HttpResponseRedirect(reverse('cart-show'))
 
 
 def get_cart(request):
