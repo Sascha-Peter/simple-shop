@@ -36,6 +36,7 @@ All additional packages can simply be installed by running:
 ### Outstanding
 * Disallow ordering more items than in stock
 * Unit tests
+* User Documentation for mac users
 
 ## Copyright
 This codebase, unless otherwise stated, is Copyright by Sascha Peter (c) 2015 sascha.o.peter@gmail.com.
