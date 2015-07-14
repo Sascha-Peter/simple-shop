@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY % BOOK_ENTITIES SYSTEM "Simple-Shop_Documentation.ent">
+%BOOK_ENTITIES;
+]>
+<chapter id="chap-Simple-Shop_Documentation-Installation">
+	<title>Installation</title>
+	<indexterm>
+        <primary>python</primary>
+        <secondary>object oriented programming language, widely found in unix/linux operating systems</secondary>
+    </indexterm>
+    <indexterm>
+    	<primary>pyenv</primary>
+        <secondary>Tool to use multiple python installations on the same unix system</secondary>
+    </indexterm>
+    <indexterm>
+    	<primary>django</primary>
+        <secondary>python web framework for perfectionists with deadlines</secondary>
+    </indexterm>
+    <indexterm>
+    	<primary>pip</primary>
+        <secondary>python package manager for installing additional packages from the python package index (PyPI)</secondary>
+    </indexterm>
+	<para>
+		The following sections will guide you through the setup and installation of the
+		software on your device.
+	</para>
+	<section id="sect-Simple-Shop_Documentation-Installation-Setting_up_Python_3_on_MAC">
+		<title>Setup Python 3 on MAC</title>
+		<para>
+			Simple-Shop has been built and developed in Python 3.3.2 and Django 1.8.
+			One of the easiest ways to set up python3, or generally multiple versions of python
+			on your environment is through <ulink url="https://github.com/yyuu/pyenv">https://github.com/yyuu/pyenv</ulink>. 
+		</para>
+		<para>
+			The following commands are a quick cheat sheet for you if you installed everything correctly
+			with pyenv.
+		</para>
+		<para>
+			To install a version
+			<command>pyenv install <replaceable>version.number</replaceable></command>
+		</para>
+		<para>
+			To set it/switch to it
+			<command>pyenv global <replaceable>version.number</replaceable></command>
+		</para>
+		<para>
+			Then to check the set version
+			<command>pyenv version</command>
+		</para>
+		<para>
+			And the overall system version
+			<command>python --version</command>
+		</para>
+		<important><title>Python 3.3.2 required!</title>
+			<para>
+			The software has been tested with Python 3.3.2 and Django 1.8.
+			Please make sure you have the right version installed.
+			</para>
+		</important>
+	</section>
+	
+	<section id="sect-Simple-Shop_Documentation-Installation-Setup_Virtual_Environment">
+		<title>Setup Virtual Environment</title>
+		<para>
+			When working with different Python versions or different projects, it's suggested to
+			use separate environments for each project to handle their requirements.
+		</para>
+		<para>
+			One way to achieve this is to use virtualenv. Pyenv has a plugin for virtualenv <ulink url="https://github.com/yyuu/pyenv-virtualenv">https://github.com/yyuu/pyenv-virtualenv</ulink>.
+			But you are free to use any virtualenv solution you prefer.
+		</para>
+		<important><title>Make sure you activate your virtual environment!</title>
+			<para>
+			Depending on your operating system and virtualenv solution you went for, the command to activate the virtualenv
+			may vary. With pyenv-virtualenv the command would be <command>pyenv activate your-virtual-env</command>
+			</para>
+		</important>
+	</section>
+
+	<section id="sect-Simple-Shop_Documentation-Installation-Install_project_dependencies">
+		<title>Install project dependencies</title>
+		<para>
+			When working with different Python versions or different projects, it's suggested to
+			use separate environments for each project to handle their requirements.
+		</para>
+		<para>
+			After activating the virtual environment for your simple-shop project, you can install all
+			project requirements through PIP. All project dependencies are listed in the pip-requirements.txt file
+			in the root of the project.
+		</para>
+		<para>
+			<command>pip install -r pip-requirements.txt</command>
+		</para>
+	</section>
+</chapter>
+
+<chapter id="chap-Simple-Shop_Documentation-Configuration">
+	<title>Configuration</title>
+	<para>
+		The following sections will guide you through the configuration and setup of the website project itself
+		and how to locally launch it in your pre-prepared environment of the previous chapter.
+	</para>
+	<section id="sect-Simple-Shop_Documentation-Configuration-Configure_the_project">
+		<title>Configure the project</title>
+		<para>
+			The root folder of the project will present you with the following folder hieararchy:
+			<itemizedlist mark='opencircle'>
+				<listitem>
+					<para>
+					cart/
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					djangocart/
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					docs/
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					product/
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					simple_shop/
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					<filename>.gitignore</filename>
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					<filename>README.md</filename>
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					<filename>manage.py</filename>
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+					<filename>pip-requirements.txt</filename>
+					</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+		<para>
+			Please change into simple_shop and create a copy of <filename>settings_local.local</filename> with the name <filename>settings_local.py</filename>.
+		</para>
+		<para>
+			<code>cd simple_shop/</code>
+			<code>cp settings_local.template settings_local.py</code>
+			<code>vi settings_local.py</code>
+		<note><title>Editor of choice</title>
+			<para>
+			The last line with <code>vi settings_local.py</code> is just an example. Please use your editor of choice for editing the python file.
+			</para>
+		</note>
+		<para>
+			Most varaibles in the settings_local.py will already be as they are needed. 
+			The only part which needs to be filled in will be <varname>SECRET_KEY</varname>.
+		</para>
+		<important><title>SECRET_KEY is required for the project to run!</title>
+			<para>
+				SECRET_KEY is used in many security related places within the django framework and should never be shared nor exposed.
+				Here is an example of a secret key (don't use for productive use): 6*kpa+0m+%k(d-$_xbh#b7zch1_9ox0!35a^@q4fv=i*p!4*to
+			</para>
+		</important>
+	</section>
+	<section id="sect-Simple-Shop_Documentation-Configuration-Create_the_database">
+		<title>Create the database</title>
+		<para>
+			Change into the root folder of simple-shop if you have not already and execute <code>python manage.py syncdb</code>.
+			Follow the directions in your console by creating a superuser which will be your admin.
+		</para>
+		<para>
+			The information asked will consist out of <replaceable>username</replaceable>, <replaceable>email address</replaceable>,
+			<replaceable>password</replaceable>.
+		</para>
+		<important><title>Make sure your virtual environment is active!</title>
+			<para>
+			In order to execute the manage.py script you'll have to have your environment active with the right python version,
+			otherwise you'll encounter potential issues / errors.
+			</para>
+		</important>
+	</section>
+	<section id="sect-Simple-Shop_Documentation-Configuration-Start_the_webapplication">
+		<title>Compile the LessCSS</title>
+		<para>
+			The project is using LessCSS to write less CSS and align the CSS more with well structured code.
+			There are a multitude of LessCSS compilers out there which can be used to compile the style.less in <filename>simple_shop/media/css/</filename>.
+		</para>
+		<note><title>In case you can't compile</title>
+			<para>
+				The project in it's current version doesn't make heavy use of css besides what twitter's bootstraps provides.
+				You could just create <filename>style.css</filename> in <filename>simple_shop/media/css</filename> and add:
+				<programlisting language="CSS">
+					body
+					{
+						padding-top:70px;
+					}
+				</programlisting>
+			</para>
+		</note>
+	</section>
+	<section id="sect-Simple-Shop_Documentation-Configuration-Start_the_webapplication">
+		<title>Start the webapplication</title>
+		<para>
+			When you finished the configuration, please execute <code>python manage.py runserver</code> and head over to <ulink url="http://localhost:8000">http://localhost:8000</ulink> in your browser of choice.
+		</para>
+	</section>
+</chapter>
