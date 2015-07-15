@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>2.2. Create the database</title><link rel="stylesheet" href="Common_Content/css/default.css" type="text/css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.1" /><meta name="package" content="" /></head><body class="draft "><div class="section" title="2.2. Create the database" id="sect-Simple-Shop_Documentation-Configuration-Create_the_database"><div class="titlepage"><div><div><h1 class="title" id="sect-Simple-Shop_Documentation-Configuration-Create_the_database">2.2. Create the database</h1></div></div></div><div class="para">
+			Change into the root folder of simple-shop if you have not already and execute <code class="code">python manage.py migrate</code>. This will setup the database hierarchy and tables.
+		</div><div class="para">
+			After the database is created, you can import the initial data with <code class="code">python manage.py loaddata data</code>. This creates all product and category entries in the database, including an superuser called admin and password admin.
+		</div><div class="para">
+			The information asked will consist out of <em class="replaceable"><code>username</code></em>, <em class="replaceable"><code>email address</code></em>, <em class="replaceable"><code>password</code></em>.
+		</div><div class="important"><h2>Make sure your virtual environment is active!</h2><div class="para">
+				In order to execute the manage.py script you'll have to have your environment active with the right python version, otherwise you'll encounter potential issues / errors.
+			</div></div></div></body></html>

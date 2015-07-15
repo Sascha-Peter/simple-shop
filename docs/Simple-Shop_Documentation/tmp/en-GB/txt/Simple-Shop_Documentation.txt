@@ -57,6 +57,16 @@ Preface
 
       1.3. Install project dependencies
 
+2. Configuration
+
+      2.1. Configure the project
+
+      2.2. Create the database
+
+      2.3. Compile the LessCSS
+
+      2.4. Start the webapplication
+
 A. Revision History
 
 Index
@@ -267,6 +277,123 @@ requirements. After activating the virtual environment for your
 simple-shop project, you can install all project requirements through
 PIP. All project dependencies are listed in the pip-requirements.txt file
 in the root of the project. pip install -r pip-requirements.txt
+
+
+ChapterÂ 2.Â Configuration
+--------------------------
+
+2.1. Configure the project
+
+2.2. Create the database
+
+2.3. Compile the LessCSS
+
+2.4. Start the webapplication
+
+The following sections will guide you through the configuration and setup
+of the website project itself and how to locally launch it in your
+pre-prepared environment of the previous chapter.
+
+
+2.1.Â Configure the project
+---------------------------
+
+The root folder of the project will present you with the following folder
+hieararchy:
+
+  *  cart/
+
+  *  djangocart/
+
+  *  docs/
+
+  *  product/
+
+  *  simple_shop/
+
+  * .gitignore
+
+  * README.md
+
+  * manage.py
+
+  * pip-requirements.txt
+
+Please change into simple_shop and create a copy of settings_local.local
+with the name settings_local.py.
+
+cd simple_shop/
+
+cp settings_local.template settings_local.py
+
+vi settings_local.py
+
+
+Editor of choice
+----------------
+
+The last line with vi settings_local.py is just an example. Please use
+your editor of choice for editing the python file. Most varaibles in the
+settings_local.py will already be as they are needed. The only part which
+needs to be filled in will be SECRET_KEY.
+
+
+SECRET_KEY is required for the project to run!
+----------------------------------------------
+
+SECRET_KEY is used in many security related places within the django
+framework and should never be shared nor exposed. Here is an example of a
+secret key (don't use for productive use):
+6*kpa+0m+%k(d-$_xbh#b7zch1_9ox0!35a^@q4fv=i*p!4*to
+
+
+2.2.Â Create the database
+-------------------------
+
+Change into the root folder of simple-shop if you have not already and
+execute python manage.py migrate. This will setup the database hierarchy
+and tables. After the database is created, you can import the initial
+data with python manage.py loaddata data. This creates all product and
+category entries in the database, including an superuser called admin and
+password admin. The information asked will consist out of username, email
+address, password.
+
+
+Make sure your virtual environment is active!
+---------------------------------------------
+
+In order to execute the manage.py script you'll have to have your
+environment active with the right python version, otherwise you'll
+encounter potential issues / errors.
+
+
+2.3.Â Compile the LessCSS
+-------------------------
+
+The project is using LessCSS to write less CSS and align the CSS more
+with well structured code. There are a multitude of LessCSS compilers out
+there which can be used to compile the style.less in
+simple_shop/media/css/.
+
+
+In case you can't compile
+-------------------------
+
+The project in it's current version doesn't make heavy use of css besides
+what twitter's bootstraps provides. You could just create style.css in
+simple_shop/media/css and add:
+
+                    body
+                    {                        padding-top:70px;                    }
+
+
+2.4.Â Start the webapplication
+------------------------------
+
+When you finished the configuration, please execute python manage.py
+runserver and head over to http://localhost:8000 in your browser of
+choice. The admin panel is accessible under http://localhost:8000/admin/.
+The username and password when you used the initial data is "admin".
 
 
 
