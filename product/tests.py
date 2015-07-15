@@ -36,8 +36,8 @@ class ProductCategoryTestCase(TestCase):
         """
         ProductCategory.objects.create(category_name="Men's Casualwear",
                                        slug=slugify("Men's Casualwear"))
-        ProductCategory.objects.create(category_name="Women's Formalwear",
-                                       slug=slugify("Women's Formalwear"))
+        ProductCategory.objects.create(category_name="Men's Formalwear",
+                                       slug=slugify("Men's Formalwear"))
         response = self.client.get(reverse('home'))
         self.assertEqual(len(response.context['categories']), 2)
 
