@@ -2,9 +2,8 @@
 
 [![Circle CI](https://circleci.com/gh/Sascha-Peter/simple-shop.svg?style=svg)](https://circleci.com/gh/Sascha-Peter/simple-shop)
 
-This project is aimed to be a small coding excercise implementing
-a simple shop front with products, categories 
-and a simple cart integration whilst showing the coding ability.
+This project is a sample coding exercise implementing a simple shop front with products,
+categories and shopping cart integration.
 
 Finished all-in-one solutions like Django-Oscar or Cartridge for Mezzanine
 have been avoided on purpose although they would have covered everything and
