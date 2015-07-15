@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="bookid">
+  <metadata>
+    <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/" id="bookid">0.4_idm8724176</dc:identifier>
+    <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Simple-Shop Documentation</dc:title>
+    <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">This documentation will guide users how to setup this project and give an overview about the code and technology used.</dc:description>
+    <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf" opf:file-as=""/>
+    <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">en</dc:language>
+  </metadata>
+  <manifest>
+    <item id="ncxtoc" media-type="application/x-dtbncx+xml" href="toc.ncx"/>
+    <item media-type="text/css" id="css" href="Common_Content/css/default.css"/>
+    <item media-type="text/css" id="print-css" href="Common_Content/css/print.css"/>
+    <item id="idm8724176" href="index.html" media-type="application/xhtml+xml"/>
+    <item id="idm2337696" href="Common_Content/images/title_logo.svg" media-type="image/svg+xml"/>
+    <item id="idm1289280" href="pref-Simple-Shop_Documentation-Preface.html" media-type="application/xhtml+xml"/>
+    <item id="idp39098064" href="pr01s02.html" media-type="application/xhtml+xml"/>
+    <item id="idm18184064" href="chap-Simple-Shop_Documentation-Installation.html" media-type="application/xhtml+xml"/>
+    <item id="idp8066640" href="sect-Simple-Shop_Documentation-Installation-Setup_Virtual_Environment.html" media-type="application/xhtml+xml"/>
+    <item id="idm10714848" href="sect-Simple-Shop_Documentation-Installation-Install_project_dependencies.html" media-type="application/xhtml+xml"/>
+    <item id="idp37091824" href="chap-Simple-Shop_Documentation-Configuration.html" media-type="application/xhtml+xml"/>
+    <item id="idm1888912" href="sect-Simple-Shop_Documentation-Configuration-Create_the_database.html" media-type="application/xhtml+xml"/>
+    <item id="idm1848960" href="sect-Simple-Shop_Documentation-Configuration-Compile_the_LessCSS.html" media-type="application/xhtml+xml"/>
+    <item id="idm14864992" href="sect-Simple-Shop_Documentation-Configuration-Start_the_webapplication.html" media-type="application/xhtml+xml"/>
+    <item id="idp42067744" href="appe-Simple-Shop_Documentation-Revision_History.html" media-type="application/xhtml+xml"/>
+    <item id="idm3183936" href="ix01.html" media-type="application/xhtml+xml"/>
+  </manifest>
+  <spine toc="ncxtoc">
+    <itemref idref="idm8724176"/>
+    <itemref idref="idm1289280"/>
+    <itemref idref="idp39098064"/>
+    <itemref idref="idm18184064"/>
+    <itemref idref="idp8066640"/>
+    <itemref idref="idm10714848"/>
+    <itemref idref="idp37091824"/>
+    <itemref idref="idm1888912"/>
+    <itemref idref="idm1848960"/>
+    <itemref idref="idm14864992"/>
+    <itemref idref="idp42067744"/>
+    <itemref idref="idm3183936"/>
+  </spine>
+</package>

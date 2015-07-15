@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 2. Configuration</title><link rel="stylesheet" href="Common_Content/css/default.css" type="text/css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.1" /><meta name="package" content="Simple-Shop-Simple-Shop_Documentation-0.4-en-GB-0.1-1" /><link rel="home" href="index.html" title="Simple-Shop Documentation" /><link rel="up" href="index.html" title="Simple-Shop Documentation" /><link rel="prev" href="sect-Simple-Shop_Documentation-Installation-Install_project_dependencies.html" title="1.3. Install project dependencies" /><link rel="next" href="sect-Simple-Shop_Documentation-Configuration-Create_the_database.html" title="2.2. Create the database" /></head><body class="draft "><p id="title"><a class="left" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_left.png" alt="Product Site" /></a><a class="right" href="https://fedorahosted.org/publican"><img src="Common_Content/images/image_right.png" alt="Documentation Site" /></a></p><ul class="docnav"><li class="previous"><a accesskey="p" href="sect-Simple-Shop_Documentation-Installation-Install_project_dependencies.html"><strong>Prev</strong></a></li><li class="next"><a accesskey="n" href="sect-Simple-Shop_Documentation-Configuration-Create_the_database.html"><strong>Next</strong></a></li></ul><div xml:lang="en-GB" class="chapter" title="Chapter 2. Configuration" id="chap-Simple-Shop_Documentation-Configuration" lang="en-GB"><div class="titlepage"><div><div><h2 class="title">Chapter 2. Configuration</h2></div></div></div><div class="toc"><dl><dt><span class="section"><a href="chap-Simple-Shop_Documentation-Configuration.html#sect-Simple-Shop_Documentation-Configuration-Configure_the_project">2.1. Configure the project</a></span></dt><dt><span class="section"><a href="sect-Simple-Shop_Documentation-Configuration-Create_the_database.html">2.2. Create the database</a></span></dt><dt><span class="section"><a href="sect-Simple-Shop_Documentation-Configuration-Compile_the_LessCSS.html">2.3. Compile the LessCSS</a></span></dt><dt><span class="section"><a href="sect-Simple-Shop_Documentation-Configuration-Start_the_webapplication.html">2.4. Start the webapplication</a></span></dt></dl></div><div class="para">
+		The following sections will guide you through the configuration and setup of the website project itself and how to locally launch it in your pre-prepared environment of the previous chapter.
+	</div><div class="section" title="2.1. Configure the project" id="sect-Simple-Shop_Documentation-Configuration-Configure_the_project"><div class="titlepage"><div><div><h2 class="title" id="sect-Simple-Shop_Documentation-Configuration-Configure_the_project">2.1. Configure the project</h2></div></div></div><div class="para">
+			The root folder of the project will present you with the following folder hieararchy: 
+			<div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						cart/
+					</div></li><li class="listitem"><div class="para">
+						djangocart/
+					</div></li><li class="listitem"><div class="para">
+						docs/
+					</div></li><li class="listitem"><div class="para">
+						product/
+					</div></li><li class="listitem"><div class="para">
+						simple_shop/
+					</div></li><li class="listitem"><div class="para">
+						<code class="filename">.gitignore</code>
+					</div></li><li class="listitem"><div class="para">
+						<code class="filename">README.md</code>
+					</div></li><li class="listitem"><div class="para">
+						<code class="filename">manage.py</code>
+					</div></li><li class="listitem"><div class="para">
+						<code class="filename">pip-requirements.txt</code>
+					</div></li></ul></div>
+
+		</div><div class="para">
+			Please change into simple_shop and create a copy of <code class="filename">settings_local.local</code> with the name <code class="filename">settings_local.py</code>.
+		</div><div class="para">
+			<table border="0" summary="Simple list" class="simplelist"><tr><td><code class="code">cd simple_shop/</code></td></tr><tr><td><code class="code">cp settings_local.template settings_local.py</code></td></tr><tr><td><code class="code">vi settings_local.py</code></td></tr></table>
+
+		</div><div class="note"><h2>Editor of choice</h2><div class="para">
+				The last line with <code class="code">vi settings_local.py</code> is just an example. Please use your editor of choice for editing the python file.
+			</div></div><div class="para">
+			Most varaibles in the settings_local.py will already be as they are needed. The only part which needs to be filled in will be <code class="varname">SECRET_KEY</code>.
+		</div><div class="important"><h2>SECRET_KEY is required for the project to run!</h2><div class="para">
+				SECRET_KEY is used in many security related places within the django framework and should never be shared nor exposed. Here is an example of a secret key (don't use for productive use): 6*kpa+0m+%k(d-$_xbh#b7zch1_9ox0!35a^@q4fv=i*p!4*to
+			</div></div></div></div><ul class="docnav"><li class="previous"><a accesskey="p" href="sect-Simple-Shop_Documentation-Installation-Install_project_dependencies.html"><strong>Prev</strong>1.3. Install project dependencies</a></li><li class="up"><a accesskey="u" href="#"><strong>Up</strong></a></li><li class="home"><a accesskey="h" href="index.html"><strong>Home</strong></a></li><li class="next"><a accesskey="n" href="sect-Simple-Shop_Documentation-Configuration-Create_the_database.html"><strong>Next</strong>2.2. Create the database</a></li></ul></body></html>
