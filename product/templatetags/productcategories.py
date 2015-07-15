@@ -13,5 +13,9 @@ register = template.Library()
 
 
 @register.inclusion_tag('product_categories.html')
-def show_categories():
-    return {'categories': ProductCategory.objects.all()}
+def show_male_categories():
+    return {'categories': ProductCategory.objects.exclude(category_name__contains="Women's")}
+
+@register.inclusion_tag('product_categories.html')
+def show_female_categories():
+    return {'categories': ProductCategory.objects.filter(category_name__icontains='Women')}

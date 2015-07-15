@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 2. Configuration</title><link rel="stylesheet" href="Common_Content/css/default.css" type="text/css" /><link rel="stylesheet" media="print" href="Common_Content/css/print.css" type="text/css" /><meta name="generator" content="publican 2.1" /><meta name="package" content="" /></head><body class="draft "><div class="chapter" title="Chapter 2. Configuration" id="chap-Simple-Shop_Documentation-Configuration"><div class="titlepage"><div><div><h1 class="title">Chapter 2. Configuration</h1></div></div></div><div class="para">
+		The following sections will guide you through the configuration and setup of the website project itself and how to locally launch it in your pre-prepared environment of the previous chapter.
+	</div><div class="section" title="2.1. Configure the project" id="sect-Simple-Shop_Documentation-Configuration-Configure_the_project"><div class="titlepage"><div><div><h1 class="title" id="sect-Simple-Shop_Documentation-Configuration-Configure_the_project">2.1. Configure the project</h1></div></div></div><div class="para">
+			The root folder of the project will present you with the following folder hieararchy: 
+			<div class="itemizedlist"><ul><li class="listitem"><div class="para">
+						cart/
+					</div></li><li class="listitem"><div class="para">
+						djangocart/
+					</div></li><li class="listitem"><div class="para">
+						docs/
+					</div></li><li class="listitem"><div class="para">
+						product/
+					</div></li><li class="listitem"><div class="para">
+						simple_shop/
+					</div></li><li class="listitem"><div class="para">
+						<code class="filename">.gitignore</code>
+					</div></li><li class="listitem"><div class="para">
+						<code class="filename">README.md</code>
+					</div></li><li class="listitem"><div class="para">
+						<code class="filename">manage.py</code>
+					</div></li><li class="listitem"><div class="para">
+						<code class="filename">pip-requirements.txt</code>
+					</div></li></ul></div>
+
+		</div><div class="para">
+			Please change into simple_shop and create a copy of <code class="filename">settings_local.local</code> with the name <code class="filename">settings_local.py</code>.
+		</div><div class="para">
+			<table border="0" summary="Simple list" class="simplelist"><tr><td><code class="code">cd simple_shop/</code></td></tr><tr><td><code class="code">cp settings_local.template settings_local.py</code></td></tr><tr><td><code class="code">vi settings_local.py</code></td></tr></table>
+
+		</div><div class="note"><h2>Editor of choice</h2><div class="para">
+				The last line with <code class="code">vi settings_local.py</code> is just an example. Please use your editor of choice for editing the python file.
+			</div></div><div class="para">
+			Most varaibles in the settings_local.py will already be as they are needed. The only part which needs to be filled in will be <code class="varname">SECRET_KEY</code>.
+		</div><div class="important"><h2>SECRET_KEY is required for the project to run!</h2><div class="para">
+				SECRET_KEY is used in many security related places within the django framework and should never be shared nor exposed. Here is an example of a secret key (don't use for productive use): 6*kpa+0m+%k(d-$_xbh#b7zch1_9ox0!35a^@q4fv=i*p!4*to
+			</div></div></div></div></body></html>
