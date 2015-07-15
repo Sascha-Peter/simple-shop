@@ -2,7 +2,7 @@
 and products. Mainly the display and interaction of said functions.
 
 @author: Sascha Peter <sascha.o.peter@gmail.com>
-@version: 0.4.1-alpha
+@version: 0.4.2-alpha
 @since: 2015-06-13
 """
 from django.shortcuts import render
