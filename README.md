@@ -36,7 +36,7 @@ All additional packages can simply be installed by running:
 * User Documentation for mac users
 
 ### Outstanding
-* Unit tests
+* More unit tests
 
 ## User Documentation
 This project contains a small user documentation how to setup and install this project (currently only covers MAC).
