@@ -1,8 +1,11 @@
 """This file contains all tests for the product module.
 
 @author: Sascha Peter <sascha.o.peter@gmail.com>
-@version: 0.5.0-alpha
+@version: 0.4.2-alpha
 @since: 2015-07-13
+
+@change: 0.4.2-alpha - Adjust test multiple categories for new template tag
+                       usage.
 """
 from django.test import Client, TestCase, RequestFactory
 from django.core.urlresolvers import reverse

@@ -1,7 +1,7 @@
 """This file contains all the product related admin definitions
 
 @author: Sascha Peter <sascha.o.peter@gmail.com>
-@version: 0.4.1-alpha
+@version: 0.4.2-alpha
 @since: 2015-06-13
 """
 from django.contrib import admin

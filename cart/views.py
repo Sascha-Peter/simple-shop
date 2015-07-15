@@ -1,7 +1,7 @@
 """This file provides the views handling cart specific tasks
 
 @author: Sascha Peter <sascha.o.peter@gmail.com>
-@version: 0.4.1-alpha
+@version: 0.4.2-alpha
 @since: 2015-06-13
 
 @change: 0.4.0-alpha - Add product stock check
