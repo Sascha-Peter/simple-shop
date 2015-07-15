@@ -9,108 +9,108 @@
     <ncx:text>Simple-Shop Documentation</ncx:text>
   </ncx:docTitle>
   <ncx:navMap>
-    <ncx:navPoint id="idm8724176" playOrder="1">
+    <ncx:navPoint id="idm4116464" playOrder="1">
       <ncx:navLabel>
         <ncx:text>Simple-Shop Documentation</ncx:text>
       </ncx:navLabel>
       <ncx:content src="index.html"/>
-      <ncx:navPoint id="idm1289280" playOrder="2">
+      <ncx:navPoint id="idp22620608" playOrder="2">
         <ncx:navLabel>
           <ncx:text>Preface</ncx:text>
         </ncx:navLabel>
         <ncx:content src="pref-Simple-Shop_Documentation-Preface.html"/>
-        <ncx:navPoint id="idp10422496" playOrder="3">
+        <ncx:navPoint id="idp18394016" playOrder="3">
           <ncx:navLabel>
             <ncx:text>1. Document Conventions</ncx:text>
           </ncx:navLabel>
-          <ncx:content src="pref-Simple-Shop_Documentation-Preface.html#idp10422496"/>
-          <ncx:navPoint id="idp14337664" playOrder="4">
+          <ncx:content src="pref-Simple-Shop_Documentation-Preface.html#idp18394016"/>
+          <ncx:navPoint id="idm5163136" playOrder="4">
             <ncx:navLabel>
               <ncx:text>1.1. Typographic Conventions</ncx:text>
             </ncx:navLabel>
-            <ncx:content src="pref-Simple-Shop_Documentation-Preface.html#idp14337664"/>
+            <ncx:content src="pref-Simple-Shop_Documentation-Preface.html#idm5163136"/>
           </ncx:navPoint>
-          <ncx:navPoint id="idm4896544" playOrder="5">
+          <ncx:navPoint id="idp24437056" playOrder="5">
             <ncx:navLabel>
               <ncx:text>1.2. Pull-quote Conventions</ncx:text>
             </ncx:navLabel>
-            <ncx:content src="pref-Simple-Shop_Documentation-Preface.html#idm4896544"/>
+            <ncx:content src="pref-Simple-Shop_Documentation-Preface.html#idp24437056"/>
           </ncx:navPoint>
-          <ncx:navPoint id="idp13734816" playOrder="6">
+          <ncx:navPoint id="idp9231584" playOrder="6">
             <ncx:navLabel>
               <ncx:text>1.3. Notes and Warnings</ncx:text>
             </ncx:navLabel>
-            <ncx:content src="pref-Simple-Shop_Documentation-Preface.html#idp13734816"/>
+            <ncx:content src="pref-Simple-Shop_Documentation-Preface.html#idp9231584"/>
           </ncx:navPoint>
         </ncx:navPoint>
-        <ncx:navPoint id="idp39098064" playOrder="7">
+        <ncx:navPoint id="idp21404672" playOrder="7">
           <ncx:navLabel>
             <ncx:text>2. Feedback</ncx:text>
           </ncx:navLabel>
           <ncx:content src="pr01s02.html"/>
         </ncx:navPoint>
       </ncx:navPoint>
-      <ncx:navPoint id="idm18184064" playOrder="8">
+      <ncx:navPoint id="idp8508544" playOrder="8">
         <ncx:navLabel>
           <ncx:text>1. Installation</ncx:text>
         </ncx:navLabel>
         <ncx:content src="chap-Simple-Shop_Documentation-Installation.html"/>
-        <ncx:navPoint id="idp9873008" playOrder="9">
+        <ncx:navPoint id="idm5068896" playOrder="9">
           <ncx:navLabel>
             <ncx:text>1.1. Setup Python 3 on MAC</ncx:text>
           </ncx:navLabel>
           <ncx:content src="chap-Simple-Shop_Documentation-Installation.html#sect-Simple-Shop_Documentation-Installation-Setting_up_Python_3_on_MAC"/>
         </ncx:navPoint>
-        <ncx:navPoint id="idp8066640" playOrder="10">
+        <ncx:navPoint id="idm4998720" playOrder="10">
           <ncx:navLabel>
             <ncx:text>1.2. Setup Virtual Environment</ncx:text>
           </ncx:navLabel>
           <ncx:content src="sect-Simple-Shop_Documentation-Installation-Setup_Virtual_Environment.html"/>
         </ncx:navPoint>
-        <ncx:navPoint id="idm10714848" playOrder="11">
+        <ncx:navPoint id="idp12495072" playOrder="11">
           <ncx:navLabel>
             <ncx:text>1.3. Install project dependencies</ncx:text>
           </ncx:navLabel>
           <ncx:content src="sect-Simple-Shop_Documentation-Installation-Install_project_dependencies.html"/>
         </ncx:navPoint>
       </ncx:navPoint>
-      <ncx:navPoint id="idp37091824" playOrder="12">
+      <ncx:navPoint id="idp48583408" playOrder="12">
         <ncx:navLabel>
           <ncx:text>2. Configuration</ncx:text>
         </ncx:navLabel>
         <ncx:content src="chap-Simple-Shop_Documentation-Configuration.html"/>
-        <ncx:navPoint id="idm1352624" playOrder="13">
+        <ncx:navPoint id="idp1042464" playOrder="13">
           <ncx:navLabel>
             <ncx:text>2.1. Configure the project</ncx:text>
           </ncx:navLabel>
           <ncx:content src="chap-Simple-Shop_Documentation-Configuration.html#sect-Simple-Shop_Documentation-Configuration-Configure_the_project"/>
         </ncx:navPoint>
-        <ncx:navPoint id="idm1888912" playOrder="14">
+        <ncx:navPoint id="idm995360" playOrder="14">
           <ncx:navLabel>
             <ncx:text>2.2. Create the database</ncx:text>
           </ncx:navLabel>
           <ncx:content src="sect-Simple-Shop_Documentation-Configuration-Create_the_database.html"/>
         </ncx:navPoint>
-        <ncx:navPoint id="idm1848960" playOrder="15">
+        <ncx:navPoint id="idm226320" playOrder="15">
           <ncx:navLabel>
             <ncx:text>2.3. Compile the LessCSS</ncx:text>
           </ncx:navLabel>
           <ncx:content src="sect-Simple-Shop_Documentation-Configuration-Compile_the_LessCSS.html"/>
         </ncx:navPoint>
-        <ncx:navPoint id="idm14864992" playOrder="16">
+        <ncx:navPoint id="idm5754304" playOrder="16">
           <ncx:navLabel>
             <ncx:text>2.4. Start the webapplication</ncx:text>
           </ncx:navLabel>
           <ncx:content src="sect-Simple-Shop_Documentation-Configuration-Start_the_webapplication.html"/>
         </ncx:navPoint>
       </ncx:navPoint>
-      <ncx:navPoint id="idp42067744" playOrder="17">
+      <ncx:navPoint id="idp17428544" playOrder="17">
         <ncx:navLabel>
           <ncx:text>A. Revision History</ncx:text>
         </ncx:navLabel>
         <ncx:content src="appe-Simple-Shop_Documentation-Revision_History.html"/>
       </ncx:navPoint>
-      <ncx:navPoint id="idm3183936" playOrder="18">
+      <ncx:navPoint id="idp49642944" playOrder="18">
         <ncx:navLabel>
           <ncx:text>Index</ncx:text>
         </ncx:navLabel>

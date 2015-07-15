@@ -149,7 +149,7 @@
             When you finished the configuration, please execute <code>python manage.py runserver</code> and head over to <ulink url="http://localhost:8000">http://localhost:8000</ulink> in your browser of choice.
         </para>
         <para>
-            The admin panel is accessible under <ulink url="http://localhost:8000">http://localhost:8000/admin/</ulink>.
+            The admin panel is accessible under <ulink url="http://localhost:8000/admin/">http://localhost:8000/admin/</ulink>.
             The username and password when you used the initial data is "admin".
         </para>
     </section>

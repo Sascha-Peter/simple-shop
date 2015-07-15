@@ -3,7 +3,7 @@
 <!ENTITY % BOOK_ENTITIES SYSTEM "Simple-Shop_Documentation.ent">
 %BOOK_ENTITIES;
 ]>
-<book lang="en-GB" status="draft">
+<book lang="en-GB">
 	<xi:include href="Book_Info.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Preface.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
 	 <xi:include href="Chapter_Installation.xml" xmlns:xi="http://www.w3.org/2001/XInclude" />
