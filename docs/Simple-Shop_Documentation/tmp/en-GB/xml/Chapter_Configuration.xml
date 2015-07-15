@@ -136,7 +136,23 @@
 <programlisting language="CSS">
                     body
                     {
-                        padding-top:70px;
+                        padding-top:70px
+                    }
+                    body .navbar
+                    {
+                        background:#fff
+                    }
+                    body .navbar-toggle
+                    {
+                        border:1px solid #808080
+                    }
+                    body .navbar-toggle .collapsed
+                    {
+                        background:#808080
+                    }
+                    body .icon-bar
+                    {
+                        background:#808080
                     }
 </programlisting>
 
