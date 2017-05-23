@@ -1,7 +1,30 @@
-machine:
-    post:
-      - pyenv global 3.4.4 3.5.3 3.6.1
-
-dependencies:
-  pre:
-    - pip install -r pip-requirements.txt
+version: 2
+jobs:
+  build:
+    working_directory: ~/simple-shop
+    docker:
+      - image: circleci/python:3.3
+      - image: circleci/python:3.4
+      - image: circleci/python:3.5
+      - image: circleci/python:3.6
+      - image: circleci/python:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "pip-requirements.txt" }}
+      - run:
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r pip-requirements.txt
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "pip-requirements.txt" }}
+          paths:
+            - "venv"
+      - run:
+          command: |
+            . venv/bin/activate
+            python manage.py test
+      - store_artifacts:
+          path: test-reports/
+          destination: tr1
