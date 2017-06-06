@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes.fields import GenericForeignKey
 
 
 class Cart(models.Model):
@@ -35,7 +36,7 @@ class Item(models.Model):
     quantity = models.PositiveIntegerField(verbose_name=_('quantity'))
     unit_price = models.DecimalField(max_digits=18, decimal_places=2, verbose_name=_('unit price'))
     # product as generic relation
-    content_type = models.ForeignKey(ContentType)
+    content_type = GenericForeignKey(ContentType)
     object_id = models.PositiveIntegerField()
 
     objects = ItemManager()
