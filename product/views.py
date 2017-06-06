@@ -6,7 +6,8 @@ and products. Mainly the display and interaction of said functions.
 @since: 2015-06-13
 """
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
 
 from .models import ProductCategory, Product
 
