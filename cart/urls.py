@@ -1,10 +1,11 @@
 from django.conf.urls import url
+from cart.views import add_to_cart, remove_from_cart, get_cart
 
 urlpatterns = [
     url(r'^add/(?P<product_id>\d+)/(?P<quantity>\d+)/',
-        'cart.views.add_to_cart', name="cart-add"),
+        add_to_cart, name="cart-add"),
     url(r'^remove/(?P<product_id>\d+)/',
-        'cart.views.remove_from_cart', name="cart-remove"),
+        remove_from_cart, name="cart-remove"),
     url(r'^show/',
-        'cart.views.get_cart', name="cart-show"),
+        get_cart, name="cart-show"),
 ]

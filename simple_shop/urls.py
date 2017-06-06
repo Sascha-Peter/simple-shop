@@ -1,4 +1,4 @@
-"""simple_shop URL Configuration
+"""simple_shop URL Configuration.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.8/topics/http/urls/
@@ -18,12 +18,14 @@ from django.views.generic.base import TemplateView
 from django.views.static import serve
 from django.conf import settings
 from django.conf.urls import include, url
+from product import urls as product_urls
+from cart import urls as cart_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', TemplateView.as_view(template_name="base.html"), name="home"),
-    url(r'^products/', include('product.urls')),
-    url(r'^cart/', include('cart.urls')),
+    url(r'^products/', include(product_urls)),
+    url(r'^cart/', include(cart_urls)),
 ]
 
 if settings.DEBUG:
