@@ -9,7 +9,7 @@ Finished all-in-one solutions like Django-Oscar or Cartridge for Mezzanine
 have been avoided on purpose although they would have covered everything and
 beyond.
 
-Author: Sascha Peter <sascha.o.peter@gmail.com>  
+Author: [Sascha Peter](https://github.com/Sascha-Peter)
 Since: 2015-06-13
 
 ## Requirements
@@ -24,6 +24,7 @@ All additional packages can be found in `pip-requirements.txt`.
 
 ### Installation of additional requirements
 All additional packages can simply be installed by running:
+
 ```bash
 pip install -r pip-requirements.txt
 ```
@@ -31,6 +32,7 @@ pip install -r pip-requirements.txt
 ## Features
 
 ### Done
+
 * Creation and editing of products
 * Creation of product categories
 * Display of products within categories and product details
@@ -40,6 +42,7 @@ pip install -r pip-requirements.txt
 * User Documentation for mac users
 
 ### Outstanding
+
 * More unit tests
 
 ## User Documentation
