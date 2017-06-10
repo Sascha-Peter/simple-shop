@@ -1,5 +1,6 @@
 # simple-shop
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ea2408a8483748fa966f4a3913cc13ae)](https://www.codacy.com/app/sascha.o.peter/simple-shop?utm_source=github.com&utm_medium=referral&utm_content=Sascha-Peter/simple-shop&utm_campaign=badger)
 [![Circle CI](https://circleci.com/gh/Sascha-Peter/simple-shop.svg?style=svg)](https://circleci.com/gh/Sascha-Peter/simple-shop) [![Updates](https://pyup.io/repos/github/Sascha-Peter/simple-shop/shield.svg)](https://pyup.io/repos/github/Sascha-Peter/simple-shop/) [![Python 3](https://pyup.io/repos/github/Sascha-Peter/simple-shop/python-3-shield.svg)](https://pyup.io/repos/github/Sascha-Peter/simple-shop/)
 
 This project is a sample coding exercise implementing a simple shop front with products,
