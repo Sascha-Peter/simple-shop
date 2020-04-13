@@ -1,2 +1,2 @@
-psycopg2==2.8.4
+psycopg2==2.8.5
 coverage==5.0
